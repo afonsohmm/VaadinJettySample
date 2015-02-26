@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    id="WebApp_ID" version="3.0"
+    xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>VaadinJettySample</display-name>
+
+    <servlet>
+        <servlet-name>VaadinJettySample</servlet-name>
+        <servlet-class>
+            com.vaadin.server.VaadinServlet
+        </servlet-class>
+        <init-param>
+            <param-name>UI</param-name>
+            <param-value>
+                com.afonsohmm.vaadinjettysample.MyVaadinUI
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>widgetset</param-name>
+            <param-value>com.afonsohmm.vaadinjettysample.AppWidgetSet</param-value>
+        </init-param>
+    </servlet>
+    
+    <context-param>
+        <param-name>productionMode</param-name>
+        <param-value>false</param-value>
+        <description>Vaadin production mode</description>
+    </context-param>
+
+    <!-- Toolkit example application -->
+    <servlet-mapping>
+        <servlet-name>VaadinJettySample</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>  
+    <servlet-mapping>
+        <servlet-name>VaadinJettySample</servlet-name>
+        <url-pattern>/VAADIN/*</url-pattern>
+    </servlet-mapping> 
+</web-app>
