@@ -6,7 +6,6 @@
 package com.afonsohmm.vaadinjettysample;
 
 import com.vaadin.server.VaadinServlet;
-
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
