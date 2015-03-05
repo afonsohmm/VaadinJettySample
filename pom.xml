@@ -19,7 +19,7 @@
         <repository>
             <id>vaadin-addons</id>
             <url>http://maven.vaadin.com/vaadin-addons</url>
-        </repository>
+        </repository>     
         <repository>
             <id>vaadin-snapshots</id>
             <url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
@@ -30,19 +30,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>vaadin-snapshots</id>
-            <url>http://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    </repositories>   
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -64,7 +52,12 @@
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-themes</artifactId>
             <version>${vaadin.version}</version>
-        </dependency>        
+        </dependency>     
+        <dependency>
+            <groupId>com.vaadin.addon</groupId>
+            <artifactId>vaadin-charts</artifactId>
+            <version>1.1.7</version>
+        </dependency>     
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -74,7 +67,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-testbench-api</artifactId>
-            <version>RELEASE</version>
+            <version>${vaadin.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -192,12 +185,13 @@
                     <compileReport>true</compileReport>
                     <noServer>true</noServer>
                     <!-- Remove draftCompile when project is ready -->
-                    <draftCompile>true</draftCompile>
+                    <draftCompile>false</draftCompile>
 					
                     <style>PRETTY</style>
                     <strict>true</strict>
                     <runTarget>http://localhost:8084/VaadinJettySample</runTarget>
-                    <logLevel>INFO</logLevel>
+                    <logLevel>ALL</logLevel>
+                    <localWorkers>1</localWorkers>
                 </configuration>
                 <executions>
                     <execution>

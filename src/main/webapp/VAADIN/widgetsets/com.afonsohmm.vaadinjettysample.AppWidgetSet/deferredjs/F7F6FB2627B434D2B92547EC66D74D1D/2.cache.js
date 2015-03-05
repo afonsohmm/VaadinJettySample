@@ -1,0 +1,1 @@
+$wnd.com_afonsohmm_vaadinjettysample_AppWidgetSet.runAsyncCallback2('defineClass(1554, 1, $intern_95);\n_.onSuccess_1 = function onSuccess_2(){\n  $setLoaded_0((!impl_14 && (impl_14 = new ConnectorBundleLoaderImpl) , impl_14), this.this$11.packageName);\n}\n;\n$entry(onLoad)(2);\n\n//# sourceURL=com.afonsohmm.vaadinjettysample.AppWidgetSet-2.js\n')

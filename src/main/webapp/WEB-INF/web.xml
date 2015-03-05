@@ -38,5 +38,6 @@
     <servlet-mapping>
         <servlet-name>VaadinJettySample</servlet-name>
         <url-pattern>/VAADIN/*</url-pattern>
-    </servlet-mapping> 
+    </servlet-mapping>    
+    
 </web-app>
